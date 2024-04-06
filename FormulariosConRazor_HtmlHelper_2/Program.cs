@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using FormulariosConRazor_HtmlHelper_2.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +9,7 @@ builder.Services.AddControllersWithViews();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<usuariosDbContext>(opt =>
+builder.Services.AddDbContext<equiposDbContext>(opt =>
         opt.UseSqlServer(
             builder.Configuration.GetConnectionString("equiposDbConnection")
             )
